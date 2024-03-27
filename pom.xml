@@ -67,11 +67,11 @@
     
     <distributionManagement>
         <!-- GitHub repository for releases -->
-        <repository>
+        <!-- <repository>
             <id>my-repository</id>
             <url>https://github.com/Deepak2202-del/Nexus_project.git</url>
             <!-- You can add additional configuration options here -->
-        </repository>
+        <!-- </repository> -->
         
         <!-- Nexus repository for releases -->
         <repository>

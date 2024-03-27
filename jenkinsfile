@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git clone') {
+            steps {
+                git branch: 'main', credentialsId: 'git_token', url: 'https://github.com/Deepak2202-del/Nexus_project.git'
+            }
+        }
+        stage('nexus') {
+            steps {
+                configFileProvider([configFile(fileId: '96d95612-e728-4362-8c1a-8f0b26e1fed5', variable: 'mavensettings')]) {
+                    // Your Nexus-related steps go here
+                    // For example, Maven build and deploy
+                    sh 'mvn clean install' // Example Maven build command
+                    sh 'mvn deploy -s $mavensettings' // Example Maven deploy command using settings.xml provided by configFileProvider
+                }
+            }
+        }
+    }
+}

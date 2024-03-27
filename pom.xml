@@ -70,13 +70,13 @@
         <!-- Nexus repository for releases -->
         <repository>
             <id>maven-releases</id>
-            <url>http://ec2-44-206-241-79.compute-1.amazonaws.com:8081/repository/maven-releases/</url>
+            <url>http://44.206.241.79:8081/repository/maven-releases/</url>
         </repository>
         
         <!-- Nexus repository for snapshots -->
         <snapshotRepository>
             <id>maven-snapshots</id>
-            <url>http://ec2-44-206-241-79.compute-1.amazonaws.com:8081/repository/maven-releases/</url>
+            <url>http://44.206.241.79:8081/repository/maven-releases/</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -85,7 +85,7 @@
         <repository>
             <id>maven-releases</id>
             <name>maven-releases</name>
-            <url>http://ec2-44-206-241-79.compute-1.amazonaws.com:8081/repository/maven-releases/</url>
+            <url>http://44.206.241.79:8081/repository/maven-releases/</url>
         </repository>
     </repositories>
     

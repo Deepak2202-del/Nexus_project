@@ -7,13 +7,19 @@ To install Nexus on Linux, follow these steps:
 --------------########## NEXUS INSTALLATION ##################-------------------------------
 
 Java 8 shouble be installed 
+
 java -version
 
 wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+
 cd nexus-3.54.1-01/
+
 cd bin/
+
 chmod +x nexus
+
 ./nexus start
+
 http://localhost:8081
 
 
@@ -22,6 +28,7 @@ http://localhost:8081
 
 
 docker run -d --name nexus -p 8081:8081 sonatype/nexus3
+
 
 Prerequisites:
 

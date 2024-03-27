@@ -27,7 +27,20 @@ http://localhost:8081
 --------------########## NEXUS INSTALLATION USING DOCKE ##################-------------------------------
 
 
-docker run -d --name nexus -p 8081:8081 sonatype/nexus3
+sudo apt update
+sudo apt install openjdk-8-jdk
+
+sudo apt install docker.io
+
+sudo docker run -d --name nexus -p 8081:8081 sonatype/nexus3
+
+grep docker /etc/group
+
+sudo usermod -aG docker $USER
+
+sudo systemctl restart docker
+
+sudo docker run -d --name nexus -p 8081:8081 sonatype/nexus3
 
 
 Prerequisites:
